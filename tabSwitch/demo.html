@@ -24,8 +24,8 @@
 <body>
 	<div class="demo h-tab active" data-tab-statu="tb1">tab1</div>
 	<div class="demo h-tab " data-tab-statu="tb2">tab2</div>
-	<div class="demo h-tab " data-tab-statu="tb3">tab3</div>
-	<div class="demo h-tab " data-tab-statu="tb4">tab4</div>
+	<div class="demo h-tab " data-tab-statu="tb3">tab3</div>   <!-- data-tab-statu属性作为tab的标记 -->
+	<div class="demo h-tab ">tab4</div>
 </body>
 <script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
 <script type="text/javascript" src="tabSwitch.js"></script>
@@ -35,8 +35,9 @@
 
 	function bcb1(){console.log("before1");}
 	function bcb2(){console.log("before2");}
-
-	var tab1  = new tabSwitch({
+	//before 在切换执行，after在切换后执行。befor和after可以是一个函数，也可以是包含很多函数的数组。若是数组，则会与
+	// tab一一对应执行
+	var tab1  = new tabSwitch({  
 		activeClass: "active",
 		before: [bcb1,bcb2],
 		after: [fcb1,fcb2]
@@ -54,6 +55,7 @@
 	// 	before: bcb1,
 	// 	after: fcb1
 	// });
-	console.log(tab1.statu);  //current active El statu
+	console.log(tab1.statu);  //当前激活tab的 data-tab-statu属性的值
+	tab1.offTab()             //取消此控件使用
 </script>
 </html>
