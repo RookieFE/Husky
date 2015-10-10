@@ -5,9 +5,9 @@
 依赖jquery
 
 <pre>HTML:
-\<div class="demo h-tab active" data-tab-statu="tb1">tab1</div>
-\<div class="demo h-tab " data-tab-statu="tb2">tab2</div>
-\<div class="demo h-tab ">tab3</div>
+\<div class="demo h-tab active" data-tab-statu="tb1">tab1\</div>
+\<div class="demo h-tab " data-tab-statu="tb2">tab2\</div>
+\<div class="demo h-tab ">tab3\</div>
 JS:
 var tabObj = new tabSwitch({
    activeClass: "active", 
