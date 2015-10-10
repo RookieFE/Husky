@@ -3,10 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<title>tab switch</title>
+	<style type="text/css">
+		.active{
+			color:red;
+		}
+		.act{
+			background: black;
+		}
+		.demo{
+			float: left;
+			width: 100px;
+			height: 30px;
+			border:1px solid black;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-	<div class="j-tab demo">tab1</div>
-	<div class="j-tab demo">tab2</div>
+	<div class="demo h-tab active" data-tab-statu="tb1">tab1</div>
+	<div class="demo h-tab " data-tab-statu="tb2">tab2</div>
+	<div class="demo h-tab " data-tab-statu="tb3">tab3</div>
+	<div class="demo h-tab " data-tab-statu="tb4">tab4</div>
 </body>
+<script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
 <script type="text/javascript" src="tabSwitch.js"></script>
+<script type="text/javascript">
+	function fcb1(){console.log("after1");}
+	function fcb2(){console.log("after2");}
+
+	function bcb1(){console.log("before1");}
+	function bcb2(){console.log("before2");}
+
+	var tab1  = new tabSwitch({
+		activeClass: "active",
+		before: [bcb1,bcb2],
+		after: [fcb1,fcb2]
+	});
+	// var tab2  = new tabSwitch({
+	// 	activeClass: "active",
+	// 	after: [fcb1,fcb2]
+	// });
+	// var tab3  = new tabSwitch({
+	// 	activeClass: "active",
+	// 	before: [bcb1,bcb2],
+	// });
+	// var tab4  = new tabSwitch({
+	// 	activeClass: "active",
+	// 	before: bcb1,
+	// 	after: fcb1
+	// });
+	console.log(tab1.statu);  //current active El statu
+</script>
 </html>
