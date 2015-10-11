@@ -13,8 +13,7 @@ var tabObj = new tabSwitch({
    after:  afterfunc     //一个函数或者一个函数数组（与tab一一对应）  可选
 });
 console.log(tabObj.statu);    //当前激活的tab的statu值
-tabObj.offTab();              //取消tab事件
-
+tabObj.offTab();              //取消tab事件</pre>
 ### H5定位
 依赖jquer
 <pre>html方式绑定类名即可: \<div class="h-location">点我定位\</div>    
