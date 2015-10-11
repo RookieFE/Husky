@@ -16,3 +16,12 @@ var tabObj = new tabSwitch({
 });
 console.log(tabObj.statu);    //当前激活的tab的statu值
 tabObj.offTab();              //取消tab事件
+### H5定位
+依赖jquer
+<pre>html方式绑定类名即可: \<div class="h-location">点我定位\</div>    
+js方式，传递一个回调到getLocationCity即可:
+getLocationCity(function(err,result){    //
+   if(err){console.log(err); return false;}
+      console.log("定位到的城市是："+result);
+   })
+}
