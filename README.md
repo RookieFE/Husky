@@ -20,7 +20,7 @@ tabObj.offTab();              //取消tab事件
 依赖jquer
 <pre>html方式绑定类名即可: &lt;div class="h-location"&gt;点我定位&lt;/div&gt;    
 js方式，传递一个回调到getLocationCity即可:
-getLocationCity(function(err,result){    //
+getLocationCity(function(err,result){    
    if(err){console.log(err); return false;}
       console.log("定位到的城市是："+result);
    })
