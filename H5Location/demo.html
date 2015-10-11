@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>H5定位demo</title>
+</head>
+<body>
+	<div style="border:1px solid black;" class="h-location">点我定位</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script type="text/javascript" src="location.js"></script>
+<script type="text/javascript">
+	getLocationCity(function(err,city){
+		if(!err){
+			console.log(city)
+		}else{
+			console.log(err);
+		}
+	});
+</script>
+</html>
