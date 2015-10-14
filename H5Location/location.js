@@ -1,3 +1,10 @@
+/**
+ * H5地理定位
+ * 首次异步请求一段数据解析脚本。h5定位得到position数据，之后异步请求结果，最后脚本解析结果完成。
+ * @param  {Function} successCB
+ * @param  {Function} errorCB
+ * @param  {Object} options
+ */
 ;function getLocation(successCB, errorCB, options){
     //获取地图提供的js api
     $.ajax({

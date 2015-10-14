@@ -26,3 +26,20 @@ getLocationCity(function(err,result){
    })
 }
 </pre>
+
+
+### webStorage
+
+<pre>
+	webStorage.getLocalStorage(key);
+	webStorage.getSessionStorage(key);
+
+	webStorage.getLocalStorage();  //返回localStorgae所有数据
+	webStorage.getSessionStorage();
+
+	webStorage.setLocalStorgae(key,val);
+	webStorage.setSessionStorgae(key,val);
+
+	webStorage.removeLocalStorage(key);
+	webStorage.removeLocalStorage(key);
+</pre>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webStorage</title>
+</head>
+<body>
+</body>
+<script type="text/javascript" src="webStorage.js"></script>
+<script type="text/javascript">
+	webStorage.setLocalStorage("local1","local1");
+	webStorage.setLocalStorage("local2","local2");
+	webStorage.setLocalStorage("lcoal3","lcoal3");
+	console.log(webStorage.getLocalStorage("local1"));
+	console.log(webStorage.getLocalStorage());
+
+	webStorage.setSessionStorage("session1","session1");
+	webStorage.setSessionStorage("session2","session2");
+	webStorage.setSessionStorage("session3","session3");
+	console.log(webStorage.getSessionStorage("session1"));
+	console.log(webStorage.getSessionStorage());
+</script>
+</html>
